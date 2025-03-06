@@ -33,22 +33,14 @@ The **Medicine Inventory Management System** is a web-based application designed
   git branch -M main  
   git remote add origin <https://github.com/KAMALAKAR12345/medicine-inventory.git>  
   git push -u origin main  
+### 3. **Configure with H2 database ** ###
+## H2 Database Configuration
+This project uses an in-memory H2 database for easy testing.  
+To access the H2 console:
+- Start the application
+- Open `http://localhost:8080/h2-console`
+- JDBC URL: `jdbc:h2:mem:med_inventory`
+- Username: `sa`
+- Password: (leave blank)
 
-### **3. Configured project setup **
-
-    spring.datasource.url=jdbc:mysql://localhost:3306/medicine_inventory  
-    spring.datasource.username=root  
-    spring.datasource.password=yourpassword  
-    spring.jpa.hibernate.ddl-auto=update  
-    spring.jpa.show-sql=true  
-
-### **4.Tested Spring Boot Application** 
-        mvn clean install  
-        mvn spring-boot:run  
-
-### **5.Finalized and Pushed to GitHub**
-    git add .  
-    git commit -m "Configured database and tested Spring Boot setup"  
-    git push origin main  
-
-    
+Spring Boot auto-configures the H2 database when running in development mode.
