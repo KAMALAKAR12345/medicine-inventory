@@ -14,7 +14,7 @@ The **Medicine Inventory Management System** is a web-based application designed
 
 ---
 
-## **MODULE 1 Tasks - Backend Setup**  
+## **MODULE 2 Tasks - Backend Setup**  
 
 ### **1. Created Spring Boot Project**  
 - Used **Spring Initializr** to generate the project with the following dependencies:  
@@ -44,3 +44,43 @@ To access the H2 console:
 - Password: (leave blank)
 
 Spring Boot auto-configures the H2 database when running in development mode.
+
+
+# Medicine Inventory Management System  
+
+### API Implementation & H2 Database Integration  
+
+### **Project Overview**  
+The **Medicine Inventory Management System** is a web-based application designed to manage medicine stock, track expiry dates, and handle orders efficiently.  
+
+### **Tech Stack**  
+- **Backend**: Spring Boot (Java)  
+- **Frontend**: React.js (To be implemented)  
+- **Database**: H2 (In-memory)  
+- **Security**: Spring Security (To be implemented)  
+- **Version Control**: Git & GitHub  
+
+---
+
+## **Tasks - Implemented API & H2 Database**  
+
+### **1️⃣ Implemented Medicine Entity**  
+Created the `Medicine` entity with attributes:  
+✅ `id` (Primary Key)  
+✅ `name`, `manufacturer`, `price`, `quantity`, `expiryDate`  
+
+### **2️⃣ Created Repository, Service & Controller**  
+✅ `MedicineRepository.java` for database operations  
+✅ `MedicineService.java` for business logic  
+✅ `MedicineController.java` for RESTful APIs  
+
+### **3️⃣ Configured H2 Database**  
+Updated `application.properties` for H2:  
+```properties
+spring.datasource.url=jdbc:h2:mem:med_inventory
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+spring.jpa.hibernate.ddl-auto=update
